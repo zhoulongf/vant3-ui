@@ -4,7 +4,7 @@
  # @FilePath: /vant3-ui/deploy.sh
  # @Date: 2021-12-04 17:15:34
  # @LastEditors: zhoulf
- # @LastEditTime: 2022-07-05 11:03:02
+ # @LastEditTime: 2022-07-05 11:07:21
  # @Description: 
 ### 
 
@@ -15,7 +15,7 @@ set -e
 yarn build:site
 
 # 进入生成的文件夹
-cd /site-dist
+cd ./site-dist
 
 # 如果是发布到自定义域名
 # echo 'www.example.com' > CNAME
