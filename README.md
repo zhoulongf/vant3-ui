@@ -1,9 +1,9 @@
 <!--
  * @Author: zhoulf
- * @FilePath: /mobile-ui/README.md
+ * @FilePath: /vant3-ui/README.md
  * @Date: 2022-03-18 11:53:51
  * @LastEditors: zhoulf
- * @LastEditTime: 2022-03-25 11:01:05
+ * @LastEditTime: 2022-07-05 11:05:14
  * @Description:
 -->
 
@@ -21,7 +21,7 @@
 
 ## 组件文档在线地址：
 
-[点击查看](http://10.12.107.48:8000/site)
+[点击查看](https://zhoulongf.github.io/vant3-ui/)
 
 ### 构建文档
 
