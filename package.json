@@ -1,0 +1,93 @@
+{
+  "name": "@cm/mobile-ui",
+  "version": "1.0.2",
+  "author": "zhoulf",
+  "description": "基于vant3的移动端ui框架",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "style": "lib/index.css",
+  "files": [
+    "lib",
+    "es"
+  ],
+  "scripts": {
+    "dev": "vant-cli dev",
+    "lint": "vant-cli lint",
+    "test": "vant-cli test",
+    "build": "vant-cli build",
+    "build:site": "vant-cli build-site",
+    "release": "vant-cli release",
+    "release:site": "pnpm build:site && gh-pages -d site-dist",
+    "test:watch": "vant-cli test --watch",
+    "test:coverage": "open test/coverage/index.html",
+    "prepare": "husky install"
+  },
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "vant-cli commit-lint"
+    }
+  },
+  "lint-staged": {
+    "*.md": "prettier --write",
+    "*.{ts,tsx,js,vue,less,scss}": "prettier --write",
+    "*.{ts,tsx,js,vue}": "eslint --fix",
+    "*.{vue,css,less,scss}": "stylelint --fix"
+  },
+  "peerDependencies": {
+    "vant": "^3.4.6",
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@vant/area-data": "^1.2.3",
+    "@vant/cli": "^4.0.0",
+    "axios": "^0.26.1",
+    "babel-plugin-import": "^1.13.3",
+    "eslint": "7.1.0",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-vue": "^8.5.0",
+    "husky": "^7.0.4",
+    "is-promise": "^4.0.0",
+    "lint-staged": "^12.3.7",
+    "moment": "^2.29.1",
+    "vant": "^3.4.6",
+    "vue": "^3.0.0"
+  },
+  "sideEffects": [
+    "es/**/style/*",
+    "lib/**/style/*",
+    "*.css",
+    "*.less"
+  ],
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@vant"
+    ]
+  },
+  "stylelint": {
+    "extends": [
+      "@vant/stylelint-config"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "browserslist": [
+    "Chrome >= 51",
+    "iOS >= 10"
+  ],
+  "keywords": [
+    "vue",
+    "vue3",
+    "jsx",
+    "vite"
+  ],
+  "dependencies": {
+    "@cm/cm-lib": "^1.1.0"
+  },
+  "engines": {
+    "node": "^14.16.0 || >=16.0.0"
+  }
+}
